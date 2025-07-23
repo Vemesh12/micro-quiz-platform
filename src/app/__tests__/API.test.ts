@@ -1,3 +1,5 @@
+// Polyfill Request for Jest environment
+global.Request = require('node-fetch').Request;
 import { NextRequest } from 'next/server'
 import { GET as getCategories } from '../api/categories/route'
 import { GET as getQuizzes } from '../api/quizzes/[category]/route'
